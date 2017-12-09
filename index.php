@@ -21,6 +21,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
     YOUR CODE HERE
   -->
   <jdoc:include type="modules" name="debug" />
+	hola
 </body>
 
 </html>
