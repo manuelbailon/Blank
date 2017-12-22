@@ -13,6 +13,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 
 // template js
+$doc->addScript($tpath.'/js/slick.min.js');
 $doc->addScript($tpath.'/js/logic.js');
 
 // template css

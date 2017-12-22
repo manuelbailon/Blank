@@ -16,6 +16,67 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 </head>
 
 <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?>">
+	<!-- Header -->
+	<div class="header">
+		<a class="logo" href="index.php">
+			<img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template?>/images/logo.png" alt="logo" />
+		</a>
+		<nav class="main-menu"><jdoc:include type="modules" name="menu" style="xhtml" /></nav>
+	</div>
+	<!-- Termina Header -->
+	<!-- Slider Principal -->
+	<?php if ($this->countModules('showcase')) : ?>
+		<div class="showcase triangule-bottom">
+			<jdoc:include type="modules" name="showcase" style="xhtml" />
+			<a class="angle-down" href="#"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+		</div>
+	<?php endif; ?>
+	<!-- Termina Slider Principal -->
+	<!-- Banner -->
+	<?php if ($this->countModules('banner')) : ?>
+		<div class="banner section">
+			<div class="wrap">
+				<jdoc:include type="modules" name="banner" style="xhtml" />
+			</div>
+		</div>
+	<?php endif; ?>
+	<!-- Termina Banner -->
+	<!-- Parallax 1 -->
+	<?php if ($this->countModules('parallax1')) : ?>
+		<div class="parallax1 triangule-top triangule-bottom">
+			<jdoc:include type="modules" name="parallax1" style="xhtml" />
+		</div>
+	<?php endif; ?>
+	<!-- Termina Parallax 1 -->
+	<!-- Banner 2 -->
+	<?php if ($this->countModules('banner2')) : ?>
+		<div class="banner2 section">
+			<div class="wrap">
+				<jdoc:include type="modules" name="banner2" style="xhtml" />
+			</div>
+		</div>
+	<?php endif; ?>
+	<!-- Termina Banner 2 -->
+	<!-- Banner 3 -->
+	<?php if ($this->countModules('banner3')) : ?>
+		<div class="banner3 section triangule-top triangule-bottom">
+			<div class="wrap">
+				<jdoc:include type="modules" name="banner3" style="xhtml" />
+			</div>
+		</div>
+	<?php endif; ?>
+	<!-- Termina Banner 3 -->
+	<!-- Footer -->
+	<?php if ($this->countModules('footer')) : ?>
+		<div class="footer section bg-negro">
+			<div class="wrap">
+				<jdoc:include type="modules" name="footer" style="xhtml" />
+			</div>
+		</div>
+	<?php endif; ?>
+	<!-- Termina Footer -->
+
+
 
 	<jdoc:include type="modules" name="debug" />
 

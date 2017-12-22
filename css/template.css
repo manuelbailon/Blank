@@ -1,15 +1,241 @@
+/* WebFonts
+*********************************************/
+@font-face {
+    font-family: 'Futura PT Demi';
+    src: url('FuturaPT-Demi.eot');
+    src: url('FuturaPT-Demi.eot?#iefix') format('embedded-opentype'),
+        url('FuturaPT-Demi.woff2') format('woff2'),
+        url('FuturaPT-Demi.woff') format('woff'),
+        url('FuturaPT-Demi.ttf') format('truetype'),
+        url('FuturaPT-Demi.svg#FuturaPT-Demi') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('Proxima Nova Regular-webfont.eot');
+    src: url('Proxima Nova Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Proxima Nova Regular-webfont.woff2') format('woff2'),
+         url('Proxima Nova Regular-webfont.woff') format('woff'),
+         url('Proxima Nova Regular-webfont.ttf') format('truetype'),
+         url('Proxima Nova Regular-webfont.svg#proxima_nova_altregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 /* FRONTEND CSS
 *********************************************/
-
-html {
-	/* scrollbar fix (prevent ugly left pull for lower content sites) */
-	overflow-y: scroll;
-}
-
+html {overflow-y: scroll;overflow-x: hidden;}
 body {
-
+	font-size: 12pt;
+	line-height: 1.6em;
+	font-family: 'Proxima Nova';
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
 }
 
+.left {float: left;}
+.right {float: right}
+.center {text-align: center;}
+
+
+.wrap {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 30px;
+	position: relative;
+	z-index: 999;
+}
+.section {clear: both;padding: 6% 0;}
+.list {
+    margin: 0 -15px;
+    overflow: hidden;
+    clear: both;
+}
+.col-4 {
+    float: left;
+    width: 25%;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Futura PT Demi';
+	margin: 1em 0;
+}
+
+
+
+h1 {
+	font-size: 3em;
+}
+h3 {
+    font-size: 1.5em;
+}
+
+h1.title-module {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+}
+a.itemtitle {
+    font-family: 'Futura PT Demi';
+    color: #000;
+    margin: 15px 0;
+    display: block;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.color-azul {color: #003a78;}
+.color-negro {color: #171717;}
+
+.bg-azul {background: #003a78;}
+.bg-negro {background: #171717;}
+
+
+.parallax1 {
+    overflow: hidden;
+}
+.triangule-top, .triangule-bottom {position: relative;}
+
+
+.triangule-bottom:before, .triangule-bottom:after {
+	content: "";
+    position: absolute;
+    z-index: 99;
+    bottom: 0;
+}
+.triangule-bottom:before {
+    right: 50%;
+    border-right: 1000px solid transparent;
+    border-left: 1000px solid;
+    border-bottom: 100px solid #fff;
+
+}
+.triangule-bottom:after {
+    left: 50%;
+    border-left: 1000px solid transparent;
+    border-right: 1000px solid;
+    border-bottom: 100px solid #fff;
+}
+
+
+
+.triangule-top:before, .triangule-top:after {
+	content: "";
+    position: absolute;
+    z-index: 99;
+    top: 0;
+}
+.triangule-top:before {
+    right: 50%;
+    border-right: 1000px solid transparent;
+    border-left: 1000px solid;
+    border-top: 100px solid #fff;
+
+}
+.triangule-top:after {
+    left: 50%;
+    border-left: 1000px solid transparent;
+    border-right: 1000px solid;
+    border-top: 100px solid #fff;
+}
+
+
+
+/* Header
+*********************************************/
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	padding: 1.5% 3%;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+a.logo {
+	display: block;
+	float: left;
+	width: 140px;
+}
+/* Menú principal
+*********************************************/
+nav.main-menu {
+	float: right;
+	font-family: 'Futura PT Demi';
+	margin-top: 27px;
+}
+nav.main-menu ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+nav.main-menu li {
+	float: left;
+	margin-left: 40px;
+}
+nav.main-menu a {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 11pt;
+}
+/* Slider
+*********************************************/
+.showcase {position: relative;}
+.tp-caption {font-family: 'Proxima Nova'!important;}
+.tp-caption.excerpt {letter-spacing: 4px!important;text-transform: uppercase;}
+.tp-caption a {color: #333!important;}
+a.angle-down {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	color: #fff;
+	display: block;
+	text-align: center;
+	font-size: 40pt;
+	z-index: 999;
+}
+
+
+
+.banner3 {
+	background: url(../images/bgtestimonios.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+	color: #fff;
+}
+.banner3:before {border-bottom-color: #171717!important;}
+.banner3:after {border-bottom-color: #171717!important;}
+
+
+
+.footer * {color: #fff;}
+.footer ul {padding: 0;list-style: none; text-align: center; margin-top: 20pt;}
+.footer li {display: inline;margin: 0 10px;}
+.footer i {font-size: 18pt;}
 
 
 /* MEDIA QUERIES

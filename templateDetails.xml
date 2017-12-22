@@ -31,6 +31,14 @@
 	</files>
 	
 	<positions><!-- define the positions for modules here -->
+		<position>menu</position>
+		<position>showcase</position>
+		<position>banner</position>
+		<position>banner2</position>
+		<position>banner3</position>
+		<position>parallax1</position>
+		<position>parallax2</position>
+		<position>footer</position>
 		<position>debug</position>
 	</positions>
 	

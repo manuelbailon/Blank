@@ -49,6 +49,8 @@ require('normalize.css');
 
 // template css
 require('template.css');
+require('font-awesome.css');
+require('slick.css');
 
 // load system stylesheets for system messages and default buttons
 require('../../../media/system/css/system.css');
